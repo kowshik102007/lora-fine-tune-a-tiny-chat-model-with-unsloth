@@ -29,7 +29,7 @@ def count_total_parameters(model):
 # Step 3 - is_model_4bit_quantized
 def is_model_4bit_quantized(model):
     """Return True if any submodule of `model` is a bitsandbytes 4-bit linear layer."""
-    # TODO: walk the model's submodules and check for a bitsandbytes Linear4bit instance
+
     for module in model.modules():
         # Check by class name or module name to safely detect bitsandbytes 4-bit layers
         class_name = module.__class__.__name__
